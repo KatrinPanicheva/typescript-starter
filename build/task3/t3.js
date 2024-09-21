@@ -1,22 +1,22 @@
-// TODO: Implement the promptForBook function
+"use strict";
+// Toteutetaan funktio, joka pyytää käyttäjältä kirjan tiedot
 function promptForBook() {
-    // TODO: Prompt user for book details (title, author, publication year)
-    const bookTitle = window.prompt('Input book title') /* TODO: Get user input for title */;
-    const bookAuthor = window.prompt('Input books author') /* TODO: Get user input for author */;
-    const bookPublicationYear = parseInt(window.prompt("Enter the publication year:") || "0", 10) /* TODO: Get user input for publication year */;
-    // TODO: Create an object of type 'Book' with the entered values
+    // Pyydetään käyttäjältä kirjan tiedot (käytetään prompt-ikkunoita selaimessa)
+    const bookTitle = window.prompt("Enter the book title:") || "Unknown Title";
+    const bookAuthor = window.prompt("Enter the author:") || "Unknown Author";
+    const bookPublicationYear = parseInt(window.prompt("Enter the publication year:") || "0", 10);
+    // Luodaan kirja-olio syötettyjen tietojen perusteella
     const book = {
         title: bookTitle,
         author: bookAuthor,
         publicationYear: bookPublicationYear
-    }; /* TODO: Create the Book object */
+    };
     return book;
 }
-// TODO: Call the promptForBook function to get the book details
+// Kutsutaan funktiota ja saadaan kirjan tiedot
 const bookDetails = promptForBook();
-// TODO: Display the details of the book object to the user
+// Näytetään kirjan tiedot käyttäjälle
 console.log("Book Details:");
 console.log(`Title: ${bookDetails.title}`);
 console.log(`Author: ${bookDetails.author}`);
 console.log(`Publication Year: ${bookDetails.publicationYear}`);
-export {};
